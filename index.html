@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffca4f">
+  <meta name="theme-color" content="#ffc129">
   <meta name="description" content="An interactive place-value and number-sense tool for Malaysian Math Year 1 pupils.">
   <title>Smart Number Builder - Math Year 1</title>
   <link rel="icon" type="image/png" href="edcloud-app-icon.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="money-theme.css?v=1">
 </head>
 <body>
   <section class="auth-gate" id="authGate" role="status" aria-live="polite" aria-atomic="true" aria-labelledby="authTitle">
@@ -21,7 +22,7 @@
   <div class="app-shell" hidden>
     <header class="topbar">
       <div class="brand">
-        <span class="brand-icon" aria-hidden="true">🔢</span>
+        <img class="brand-icon" src="edcloud-app-icon.png" alt="" aria-hidden="true" draggable="false">
         <div>
           <h1 data-i18n="appTitle">Jom Bina Nombor!</h1>
           <p data-i18n="appSubtitle">Susun, tukar dan fahami nilai nombor.</p>
@@ -29,6 +30,10 @@
       </div>
 
       <div class="header-actions">
+        <button class="fullscreen-toggle" id="fullscreenToggle" type="button" aria-pressed="false">
+          <span aria-hidden="true">⛶</span>
+          <span>Skrin penuh</span>
+        </button>
         <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true">
           <span aria-hidden="true">🔊</span>
           <span data-i18n="soundOn">Bunyi: Buka</span>
@@ -158,6 +163,7 @@
   </div>
 
   <script src="grade-config.js"></script>
+  <script src="classroom-view.js"></script>
   <script type="module" src="auth-bootstrap.js"></script>
 </body>
 </html>
